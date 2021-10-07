@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <h3>Arrow Functions </h3>
+        First Name: <input type="text" id="fname" placeholder="Enter first Name" ><br><br>
+        Last Name: <input type="text" id="lname" placeholder="Enter last name"><br>
+        <button onclick="myFunction()" >Click Me</button>
+        <br>
+        <p id = "demo"></p>
+        <script>
+            function myFunction(){
+                    let firstName = document.getElementById("fname").value;
+                    let lastName = document.getElementById("lname").value;
+                    let result = (firstName, lastName) => firstName.charAt(0)+lastName.charAt(0);
+                    document.getElementById("demo").innerHTML=result(firstName,lastName);
+            }
+        </script>
+    </body>
+</html>

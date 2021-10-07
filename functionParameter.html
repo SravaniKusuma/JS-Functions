@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Passing functions</title>
+    </head>
+    <body>
+        <h3>Pasing Functions as parameter</h3>
+        <p>Tha languages are:</p>
+        <p id= "lang"></p>
+        <br>
+        <p>The length of each languages are:</p>
+        <p id = "len"></p>
+
+        <script>
+            const languages=["javascript", "python","java","ruby","go","c++"];
+
+            function mapForEach(languages, itemLength){
+
+                const lengthArray=[];
+
+                for(let i =0; i<languages.length;i++)
+                {
+                    lengthArray.push(itemLength(languages[i]));
+
+                }
+                return lengthArray;
+
+            }
+
+            function itemLength(item)
+            {
+                return item.length;
+            }
+
+            const length = mapForEach(languages, itemLength );
+            
+            document.getElementById("lang").innerHTML=languages;
+            document.getElementById("len").innerHTML=length;
+        </script>
+    </body>
+</html>
